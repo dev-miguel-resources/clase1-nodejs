@@ -1,6 +1,6 @@
 // requireds
-const fs = require('fs');
-const colors = require('colors');
+const fs = require('fs'); //para escribir en archivo
+const colors = require('colors'); //para colores en la consola
 
 let listarTabla = (base, limite = 10) => {
 
@@ -37,7 +37,7 @@ let crearArchivo = (base, limite = 10) => {
             if (err)
                 reject(err)
             else
-                resolve(`tabla-${ base }-al-${ limite }.txt`);
+                resolve(`tabla-${ base }-al-${ limite }.txt`); //escribe el resultado en este archivo
 
         });
 
@@ -45,7 +45,7 @@ let crearArchivo = (base, limite = 10) => {
 
 }
 
-module.exports = {
+module.exports = { //aqui pongo métodos exportables
     crearArchivo,
     listarTabla
 }

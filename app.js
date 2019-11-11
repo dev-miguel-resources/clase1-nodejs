@@ -1,9 +1,9 @@
-const argv = require('./config/yargs').argv;
+const argv = require('./config/yargs').argv; //para poder manipular argumentos o parametros que viene del archivo config
 const colors = require('colors/safe');
 
 const { crearArchivo, listarTabla } = require('./multiplicar/multiplicar');
 
-let comando = argv._[0];
+let comando = argv._[0]; //argumento sin bandera
 
 
 switch (comando) {
